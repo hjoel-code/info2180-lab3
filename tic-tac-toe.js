@@ -24,5 +24,15 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    board.addEventListener('mouseover', e => {
+        if (e.target.id != 'board') {
+            e.target.classList.add('hover')
+
+            setTimeout(() => {
+                e.target.classList.remove('hover')
+            }, 500);
+        }
+    });
+
     
 });
